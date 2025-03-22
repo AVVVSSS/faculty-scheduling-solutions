@@ -12,6 +12,7 @@ import Dashboard from "./pages/Dashboard";
 import Faculty from "./pages/Faculty";
 import Classrooms from "./pages/Classrooms";
 import Subjects from "./pages/Subjects";
+import Scheduling from "./pages/Scheduling";
 import NotFound from "./pages/NotFound";
 
 // Add framer-motion
@@ -59,6 +60,11 @@ const AppRoutes = () => {
         <Route path="/subjects" element={
           <ProtectedRoute>
             <Subjects />
+          </ProtectedRoute>
+        } />
+        <Route path="/scheduling" element={
+          <ProtectedRoute>
+            <Scheduling />
           </ProtectedRoute>
         } />
         <Route path="*" element={<NotFound />} />
