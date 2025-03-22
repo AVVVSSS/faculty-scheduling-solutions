@@ -30,7 +30,8 @@ const Auth = () => {
       if (isLogin) {
         await login(email, password);
       } else {
-        await signup(email, password, name);
+        // Setting default role as 'staff' for signup
+        await signup(email, password, name, 'staff');
       }
       navigate('/dashboard');
     } catch (error) {
